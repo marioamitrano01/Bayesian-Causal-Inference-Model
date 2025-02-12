@@ -6,9 +6,7 @@ import plotly.express as px
 import time
 import functools
 
-# ------------------------------------------------------------------------------
-# Timer decorator for profiling function execution times.
-# ------------------------------------------------------------------------------
+
 def timer(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
@@ -19,12 +17,7 @@ def timer(func):
         return result
     return wrapper
 
-# ------------------------------------------------------------------------------
-# BayesianCausalInference: A class for Bayesian causal inference
 
-#
-# The user is prompted to enter all required inputs.
-# ------------------------------------------------------------------------------
 class BayesianCausalInference:
     def __init__(self, N, p_trt, true_alpha_control, true_alpha_treatment,
                  true_beta, true_gamma, sigma, seed):
@@ -274,9 +267,7 @@ class BayesianCausalInference:
                           template="plotly_white")
         fig.show()
 
-# ------------------------------------------------------------------------------
-# Main execution block
-# ------------------------------------------------------------------------------
+
 if __name__ == "__main__":
     print("Welcome to the Mario's Bayesian Causal Inference Model.")
     print("Please follow the instructions to input the required parameters.\n")
